@@ -119,11 +119,10 @@ let densidadeDemografica = (area,populacao) => populacao / area
 
 */
 
-for(let i = 1; i <estadosNe.length; i++){
-    estado[i]['densidade demográfica'] = (densidadeDemografica(`${estado[i][area]}`,`${estado[i][populacao]}`))
+for(let i = 0; i < estadosNe.length; i++){
+    (estado[i])['densidade demográfica'] = (densidadeDemografica(`${(estado[i])[area]}`,`${(estado[i])[populacao]}`))
 
-    delete estado[i].sigla
-
+    delete (estado[i]).sigla
 }
 
 console.log(estado2)
