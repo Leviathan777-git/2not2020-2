@@ -120,30 +120,46 @@ let densidadeDemografica = (area,populacao) => populacao / area
 */
 
 for(let i = 0; i < estadosNe.length; i++){
-    (estado[i])['densidade demográfica'] = (densidadeDemografica(`${(estado[i])[area]}`,`${(estado[i])[populacao]}`))
+    estadosNe[i]['densidade demográfica'] = (densidadeDemografica(`${estadosNe[i].area}`,`${estadosNe[i].populacao}`))
 
-    delete (estado[i]).sigla
+    delete (estadosNe[i]).sigla
 }
 
-console.log(estado2)
 
 /* 4) Escreva uma arrow function que receba um objeto. Na função, use for..in
       para extrair as propriedades e seus valores e exibi-los com console.log().
 
 */
 
+let arrowAlet = objeto =>{
+    for(let prop in objeto){
+        console.log(`Atributo: ${prop}; valor: ${objeto[prop]}`)
+    }
+}
+
 /* 5) Percorra o vetor estadosNe usando for..of. Para cada objeto no vetor,
       invoque a função escrita em 4) para exibi-lo.
+*/
+
+
+for(let aleat of estadosNe){
+    console.log(arrowAlet(aleat))
+}
 
 /*
    6)
-      a) Declare um vetor vazio.
-      b) Insira no vetor criado no item a) apenas o nome de cada Estado, conforme
+      a) Declare um vetor vazio.*/
+
+      let vet = []
+
+      /*b) Insira no vetor criado no item a) apenas o nome de cada Estado, conforme
          os dados no topo deste arquivo, um de cada vez. Faça as inserções de 
          modo que o vetor final esteja em ordem alfabética. No caso, o primeiro 
          Estado (Sergipe), pode ser inserido com push(), mas o segundo (Alagoas)
          deve ser inserido com unshift(), para manter a ordem alfabética. 
          O terceiro Estado (Rio Grande do Norte) deve ser inserido entre os dois 
          já existentes, e assim por diante.
-
 */
+    vet.push(estado2.nome,estado9.nome,estado6.nome,estado8.nome,estado4.nome,estado5.nome,estado7.nome,estado3.nome)
+
+    
